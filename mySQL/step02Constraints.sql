@@ -148,5 +148,37 @@ on delete cascade
 delete from students where id= '126';
 
 
+##################################################################
+drop table students;
+CREATE TABLE students
+(
+    studentId SMALLINT PRIMARY KEY,
+    studentName VARCHAR(50) UNIQUE,
+    studentAge SMALLINT NOT NULL,
+    studentDob DATE,
+    CONSTRAINT studentAgeCheck CHECK(studentAge BETWEEN 15 AND 20), # 15 and 20 are inclusive
+    CONSTRAINT studentNameUpperCase CHECK(studentName = UPPER(studentName))
+);
+
+
+INSERT INTO students VALUES(100,'ALI CAN', 16, '2007-08-10');
+INSERT INTO students VALUES(101, 'VELI HAN', 20, '2003-01-01');
+
+#For integer we do not use single quotes, but if you use it will work as well
+INSERT INTO students VALUES(102, 'AYSE TAN', 15, '2008-02-29');
+
+#For varchar and date we have to use single quotes
+INSERT INTO students VALUES(103, 'JOHN DOE', 19, '2004-05-22');
+INSERT INTO students VALUES(107, 'TOM JONNY', 18, '2005-05-22');
+
+# second way to insert data for specific fiels
+
+insert into students(studentName, studentAge, studentId) values('MARK TWAIN', 16, 104);
+insert into students(studentName, studentAge, studentId) values('MARY STAR', 17, 105);
+insert into students(studentAge,studentId) values (20,106);
+#UNIQUE constraint can not have duplicate values but it can have duplicate 'null'
+insert into students(studentAge,studentId) values (20,108);
+
+
 
 
