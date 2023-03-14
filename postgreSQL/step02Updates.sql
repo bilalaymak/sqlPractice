@@ -113,6 +113,22 @@ ssn int,
 name varchar(50),
 address varchar(80)
 );
+insert into people values(123456789, 'Mark Star', 'Florida');
+insert into people values(234567890, 'Angie Way', 'Virginia');
+insert into people values(345678901, 'Maryy Tien', 'New Jersey');
+insert into people (ssn, address) values (456789012, 'Michigan');
+insert into people (ssn, address) values(567890123, 'California');
+insert into people (ssn, name) values(567890123, 'California');
+
+--Change null names to "Name will be inserted later"
+update people
+set name = 'Name will be inserted later'
+where name is null;
+
+--Change null addresses to "Address will be inserted later"
+update people
+set address = 'Address will be inserted later'
+where address is null;
 
 
 
@@ -125,9 +141,5 @@ address varchar(80)
 
 
 
-
-
-
-
-select * from workers;
+select * from people;
 drop table students, workers;
