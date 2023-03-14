@@ -1,0 +1,23 @@
+/*
+SQL: Structured Query Language
+It is a language to query, manage and design data in database.
+Database: The place where the data related to each other exist
+SQL Commands Are Grouped:
+
+1. DQL: Data Query Language
+SELECT: Fetch data from database(READING)
+
+2. DML: Data Manipulation Language
+INSERT: Adds data to database
+DELETE: Deletes the data from database
+UPDATE: Updates the data in the database
+
+3. DDL: Data Definition Language
+DROP: Deletes the table
+ALTER: Updates the table
+CREATE: Creates the table
+
+4. DCL: Data Control Language
+GRANT: Used to authorize the user
+REVOKE: Used to revoke the privilege users
+*/

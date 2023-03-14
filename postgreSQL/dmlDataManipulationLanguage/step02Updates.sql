@@ -76,6 +76,12 @@ set studentDob = (select min(studentDob) from students);
 
 -----------------------------------------------------------------------
 
+--Create workers table whose fields are worker_id, worker_name, worker_salary.
+--worker_id will have primary key with the name worker_id_pk
+--Insert 4 records into the workers table
+--See the table on the console
+
+
 create table workers
 (
 workerId smallint,

@@ -1,5 +1,46 @@
 --DQL: It is language for reading data. We use 'SELECT'
 
+create table workers
+(
+id smallint,
+name varchar(50),
+salary smallint,
+
+constraint workersId_pk primary key(id)
+);
+
+insert into workers values(10001, 'Ali Can', 12000);
+insert into workers values(10002, 'Veli Han', 2000);
+insert into workers values(10003, 'Mary Star', 7000);
+insert into workers values(10004, 'Angie Ocean', 8500);
+
+--How to select all records
+select * from workers;
+
+--How to get specific fields from a table
+select name from workers;
+
+--How to get specific multiple fields
+select name, salary from workers;
+
+--How to get specific record
+select * from workers
+where id = 10001;
+
+--How to get multiple specific records
+select * from workers
+where id < 10003;
+
+--Get records whose salary is 2000 or 7000 or 12000
+--1. Way: NOT Recommended
+select * from workers
+where salary = 2000 or salary = 7000 or salary = 12000;
+
+--2. Way: Instead of using OR again and again, use IN
+
+select * from workers
+where salary in(2000,7000,12000);
+
 
 --creating table and inserting data into the table
 drop table students;
@@ -195,7 +236,7 @@ CREATE TABLE words (
  select * from words where regexp_like(word,'h[a-zA-Z-0-9][a-zA-Z-0-9]t','c');
 
 --  #Q22=> list words ending with "t" or "m"
- select * from words where regexp_like(word, 't$|m$'); # or wecan use 't$|m'
+ select * from words where regexp_like(word, 't$|m$'); -- # or we can use 't$|m'
 
 --  #Q23=> list words including "m","i" or "e"
  select * from words where regexp_like(word, 'm|i|e');

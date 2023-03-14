@@ -139,6 +139,8 @@ UPDATE people
 SET address = 'Address will be inserted later'
 WHERE address IS NULL;
 
+-----------------------------DELETE---------------------------------
+
 --How to Delete record from a table
 --Delete 'Angie Way' record from table
 DELETE FROM people
@@ -206,7 +208,7 @@ SELECT * FROM workers
 WHERE id < 10003;
 
 --Get records whose salary is 2000 or 7000 or 12000
---1. Way: NOT Recomended
+--1. Way: NOT Recommended
 SELECT * FROM workers
 WHERE salary = 2000 OR salary = 7000 OR salary = 12000;
 

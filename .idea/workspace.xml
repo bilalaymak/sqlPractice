@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a9ae8ea-51aa-4356-b8ff-44826030e052" name="Changes" comment="updated">
-      <change afterPath="$PROJECT_DIR$/postgreSQL/instructions/step04.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postgreSQL/step01readData.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postgreSQL/step04Delete.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgreSQL/01definition" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgreSQL/ddlDataDefinionLanguage/Create.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgreSQL/dmlDataManipulationLanguage/insert.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgreSQL/instructions/recap01.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgreSQL/instructions/step01.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/instructions/step01.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/postgreSQL/instructions/step02.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/instructions/step02.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgreSQL/instructions/step03.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/instructions/step03.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgreSQL/step01Updates.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/step02Updates.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgreSQL/step02joins.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/step05joins.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreSQL/instructions/step03.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/instructions/step03recap.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreSQL/step01readData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/dqlDataDefinitionLanguage/step01readData.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreSQL/step02Updates.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/dmlDataManipulationLanguage/step02Updates.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreSQL/step03alter.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/ddlDataDefinionLanguage/step03alter.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreSQL/step04Delete.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/dmlDataManipulationLanguage/step04Delete.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreSQL/step05joins.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/joins/step05joins.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,14 @@
     "last_opened_file_path": "C:/Users/bilal/IdeaProjects/sqlPractice"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bilal\IdeaProjects\sqlPractice\postgreSQL\joins" />
+      <recent name="C:\Users\bilal\IdeaProjects\sqlPractice\postgreSQL\ddl" />
+      <recent name="C:\Users\bilal\IdeaProjects\sqlPractice\postgreSQL\dml" />
+      <recent name="C:\Users\bilal\IdeaProjects\sqlPractice\postgreSQL\dql" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -107,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678819679284</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated">
+      <created>1678826538968</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678826538968</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
