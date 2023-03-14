@@ -48,8 +48,51 @@ truncate table people;
 drop table people;
 drop table workers;
 
+-------------------------------------------------------------------------
+
+create table students
+(
+id smallint,
+name varchar(20),
+address varchar(100),
+examGrade smallint,
+registrationDate date
+);
 
 
+insert into students values(120, 'Ali Can', 'Ankara', 70, '11.Feb.2023');
+insert into students values('121', 'Veli Han', 'Trabzon', 75, '11.02.2022');
+insert into students values(122, 'Ayşe Tan', 'Bursa', 85, '11.Aug.2021');
+insert into students values(123, 'Mary Star', 'İstanbul', 95, 'Jan.1.2020');
+insert into students values(124, 'Terry Star', 'Ankara', 95, '1.Sep.19');
+insert into students values(125, 'Herry Star', 'Antalya', 95, '1.2.18');
+insert into students values(126, 'Sally Otar', 'İzmir', 100, '30.6.17');
+
+--Delete the record whose address is 'Antalya'
+delete from students
+where address = 'Antalya';
+
+--Delete the lines (record/row) whose names are 'Ali Can', 'Veli Han' and 'Sally Otar'.
+delete from students
+where name in('Ali Can','Veli Han','Sally Otar');
+
+-- Delete the first and last created records
+delete from students
+where registrationDate in((select min(registrationDate)from students),select max(registrationDate) from students);
+
+
+--Delete all rows whose ids are greater than 122
+delete from students
+where id >122;
+
+--Delete all records
+delete from students;
+
+--or TRUNCATE
+truncate students;
+
+--Drop the table
+drop table students;
 
 
 
