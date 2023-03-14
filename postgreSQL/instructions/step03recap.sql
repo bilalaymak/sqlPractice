@@ -96,7 +96,7 @@ WHERE exam_grade >=75 AND exam_grade<=95;
 
 --2. Way:
 SELECT name, exam_grade  FROM students
-WHERE exam_grade BETWEEN 75 AND 95;--Boundries are inclusive
+WHERE exam_grade BETWEEN 75 AND 95;--Boundaries are inclusive
 
 --Question 8: Get the addresses of students whose IDs are not between 122 and 125.
 --1. Way:
@@ -105,7 +105,7 @@ WHERE id <122 OR id > 125;
 
 --2. Way: NOT BETWEEN
 SELECT address FROM students
-WHERE id NOT BETWEEN 122 AND 125;--Boundries are exclusive
+WHERE id NOT BETWEEN 122 AND 125;--Boundaries are exclusive
 
 --3. Way: NOT IN
 SELECT address FROM students

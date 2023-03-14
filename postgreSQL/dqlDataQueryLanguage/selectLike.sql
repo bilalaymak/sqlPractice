@@ -1,139 +1,4 @@
---DQL: It is language for reading data. We use 'SELECT'
-
-create table workers
-(
-id smallint,
-name varchar(50),
-salary smallint,
-
-constraint workersId_pk primary key(id)
-);
-
-insert into workers values(10001, 'Ali Can', 12000);
-insert into workers values(10002, 'Veli Han', 2000);
-insert into workers values(10003, 'Mary Star', 7000);
-insert into workers values(10004, 'Angie Ocean', 8500);
-
---How to select all records
-select * from workers;
-
---How to get specific fields from a table
-select name from workers;
-
---How to get specific multiple fields
-select name, salary from workers;
-
---How to get specific record
-select * from workers
-where id = 10001;
-
---How to get multiple specific records
-select * from workers
-where id < 10003;
-
---Get records whose salary is 2000 or 7000 or 12000
---1. Way: NOT Recommended
-select * from workers
-where salary = 2000 or salary = 7000 or salary = 12000;
-
---2. Way: Instead of using OR again and again, use IN
-
-select * from workers
-where salary in(2000,7000,12000);
-
-
---creating table and inserting data into the table
-drop table students;
-create table students
-(
-id varchar(4),
-name varchar(30),
-age int
-);
-
-insert into students values ('1000','yusuf Gur', 24);
-insert into students values ('1000','Nazan Yaman', 27);
-insert into students values ('1000','Meltem Can', 34);
-insert into students values ('1000','Omer Asaf', 18);
-
--- getting datas from table
-select * from students;
-select id from students;
-select id,name from students;
-drop table students;
-
----------------------------------------------------
-
-create table trainee
-(
-id int,
-name varchar(40),
-address varchar(100),
-examGrade int
-);
-insert into trainee values ('120','Ahmet Yaman','Istanbul',59);
-insert into trainee values ('121','Mehmet Can','Ankara',57);
-insert into trainee values ('122','Meltem Atalay','Bingol',78);
-insert into trainee values ('123','bilal aymak','Izmir',76);
-insert into trainee values ('124','Omer Yildiz','Mersin',90);
-
-select * from trainee;
-
--- #when we fetch datas from database, we use "where" keyword with "select" to filter the datas
--- #select column1, select column2 ...
--- #from tableName where condition
-
--- #Q1=> list information of trainees whose exam grade is above 80
-select * from trainee where examGrade > 80;--#'124', 'Omer Yildiz', 'Mersin', '90'
-
--- #Q2=> list address information of trainees whose address is Ankara
-select * from trainee where  address = --'Ankara'; #'121', 'Mehmet Can', 'Ankara', '57'
-
--- #Q3=> list all the information of trainees whose id = 123
-select * from trainee where id = 123;--'123', 'bilal aymak', 'Izmir', '76'
-
--- #Q4=> list address and exam grade information whose id = 121;
-select address, examGrade from trainee where id = 121;
-
-drop table trainee;
-
-
---------------------------------------------------
-
-create table personal
-(
-id char(4),
-name varchar(40),
-salary int
-);
-insert into personal values('1001','Ali Can','70000');
-insert into personal values('1002','Canan Yaman','85000');
-insert into personal values('1003','Meltem Tan','65000');
-insert into personal values('1004','Omer Atalay','75000');
-
--- # between keyword
--- # lists the information between two datas
-
--- #Q5=> list personals informations whose id is between 1002 and 1005
-
-select * from  personal where id between 1002 and 1005;
-select * from personal where id >=1002 and id<=1005;
-
--- #Q6=> list personals information they are between Ali Can and Omer Atalay
--- # 'Ali Can' and 'Omer Atalay' are inclusive
-select * from personal where name between 'Ali Can' and 'Omer Atalay';
-
--- #Q7=> list personals information whose ids are 1001,1002 and 1004
-select * from personal where id in(1001,1002,1004);
-select * from personal where id = '1001' or id = '1002' or id = '1004';
-
--- #Q8=> list personals whose salary are 70000 and 100000
-select * from personal where salary in(70000,100000);
-
-
-----------------------------------------------
-
--- #select - like
+-----------------SELECT-LIKE-------------------------------------
 -- #like: it provides certain patterns when we do queries
 
 /*
@@ -174,7 +39,7 @@ select * from personal where salary like '______';
 select * from personal where name like 'C_____Y%'; # '1002', 'Canan Yaman', '85000'
 
 
-----------------------------------------------------
+-------------------------SELECT-REGEXP_LIKE---------------------------
 /*
 select-regexp_like
 REGEXP_LIKE can be used for complicater patterns
@@ -210,7 +75,7 @@ CREATE TABLE words (
  select * from words;
 
 --  #Q16=> list words containing the letters 'ot' or 'at', paying attention to case sensitivity
---  select * from words where regexp_like(word, 'ot|at', 'c');
+    select * from words where regexp_like(word, 'ot|at', 'c');
 --  #we use " | " character for "or" in regexp_like expressions
 
 --  #Q17=> list words containing the letters 'ot' or 'at', not paying attention to case sensitivity
@@ -253,14 +118,3 @@ CREATE TABLE words (
 
 -- #Q27=> list five-letter-words starting with "s" or "b", 3rd letter is "l"
 select * from words where regexp_like(word, '^s|^b_[l]__','c');
-
-
-
-
-
-
-
-
-
-
-
