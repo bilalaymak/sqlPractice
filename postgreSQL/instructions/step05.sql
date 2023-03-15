@@ -213,7 +213,7 @@ SELECT state AS "state/name", salary
 FROM workers
 WHERE salary > 3000
 
-UNION ALL--> UNION ALL does same thing with UNION but it gives repeat records.
+UNION ALL--> UNION ALL does same thing with UNION but it gives repeated records.
 
 SELECT name, salary
 FROM workers
