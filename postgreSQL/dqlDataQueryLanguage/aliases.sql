@@ -34,6 +34,29 @@ insert into addresses values (14, '3rd Man 12', 'Weston', 'MI', '12345');
 insert into addresses values (15, '11th Chris 12', 'St. Johns', 'FL', '32259');
 
 
+--How to put aliases for table names
+--1)Select employee_first_name and state, for employee first name use "firstname"
+--as field name and for state use "employee state" as field name
+
+select e.employeeFirstName as firstName, a.state as "employee state"
+from employees e, addresses a
+where e.employeeId = a.employeeId;
+
+--How to put multiple fields into a single field and use aliases for the field
+
+--2)Get employeeId use "id" as field name, get firstName and lastName put them into the same field
+--and use "full_name" as field name
+
+select employeeId as id, employeeFirstName || ' ' || employeeLastName as fullName
+from employees;
+
+
+
+
+
+
+
+
 
 
 

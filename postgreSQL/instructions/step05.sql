@@ -96,14 +96,17 @@ SELECT * FROM addresses;
 --ALIASES
 
 --How to put aliases for table names
---1)Select employee_first_name and state, for employee first name use "firstname" as field name and for state use "employee state" as field name
+--1)Select employee_first_name and state, for employee first name use "firstname"
+--as field name and for state use "employee state" as field name
 
 SELECT e.employee_first_name AS firstname, a.state AS "employee state"
 FROM employees e, addresses a
 WHERE e.employee_id = a.employee_id;
 
 --How to put multiple fields into a single field and use aliases  for the field
---2)Get employee id use "id" as field name, get firstname and lastname put them into the same field and use "full_name" as field name
+--2)Get employee id use "id" as field name, get firstname and lastname put them into the same field
+--and use "full_name" as field name
+
 SELECT employee_id AS id, employee_first_name || ' ' || employee_last_name AS full_name
 FROM employees;
 
@@ -163,7 +166,7 @@ HAVING SUM(salary) > 2500;-->After Group By, Where can NOT be used. We have to u
 
 --SELECT name, SUM(salary) AS total_salary
 --FROM workers
---WHERE SUM(salary) > 2500  --> We can NOT use aggragate functions with WHERE clause.(SUM(), AVG(), MIN(), MAX(), COUNT)
+--WHERE SUM(salary) > 2500  --> We can NOT use aggregate functions with WHERE clause.(SUM(), AVG(), MIN(), MAX(), COUNT)
 --GROUP BY name;
 
 --Find the number of employees if it is more than 1 per state
