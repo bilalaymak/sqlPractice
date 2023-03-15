@@ -128,6 +128,64 @@ where regexp_like(word, '^[say](.*)');--> ^ means first character when you use i
 select word from words
 where regexp_like(word,'(.*)[maf]$');
 
+--Select words which have 'a' in any position
+select word from words
+where ~ '(.*)a(.*)';
+
+--or
+select word from words
+where ~ 'a';--> 'a' --> '(.*)a(.*)' ==> '%a%'
+
+--Select words which have characters from 'd' to 't' at the beginning
+--followed by any character then 'l'
+select word from words
+where ~ '^[d-t].l'; --> "." means one single character
+
+--Select words which have characters from 'd' to 't' at the beginning
+--followed by any 2 characters then 'e'
+select word from words
+where ~ '^[d-t]..e';
+
+---------------------------------------------------------------
+
+create table workers
+(
+id char(9),
+name varchar(50),
+state varchar(50),
+salary smallint,
+company varchar(20)
+);
+
+insert into workers values(123456789, 'John Walker', 'Florida', 2500, 'IBM');
+insert into workers values(234567890, 'Brad Pitt', 'Florida', 1500, 'APPLE');
+insert into workers values(345678901, 'Eddie Murphy', 'Texas', 3000, 'IBM');
+insert into workers values(456789012, 'Eddie Murphy', 'Virginia', 1000, 'GOOGLE');
+insert into workers values(567890123, 'Eddie Murphy', 'Texas', 7000, 'MICROSOFT');
+insert into workers values(456789012, 'Brad Pitt', 'Texas', 1500, 'GOOGLE');
+insert into workers values(123456710, 'Mark Stone', 'Pennsylvania', 2500, 'IBM');
+
+--Select employee names which do not start with 'E' and do not end with 'y'
+--1st Way:
+select name from workers
+where name not like 'E%y';
+
+--2nd Way:
+select name from workers
+where name ~ '^[^E](.*)[^y]$';
+ --> If you use ^ inside the brackets it means 'NOT'/'Different From'
+
+--Select states whose third character is 'o' or 'x'
+select state from workers
+where state ~ '..[0x]';
+
+--Select states whose third character from the end is not 'n' or 'x'
+select state from workers
+where state ~ '[^n-x]..$';
+
+
+
+
 
 
 
