@@ -1,46 +1,6 @@
------------------SELECT-LIKE-------------------------------------
--- #like: it provides certain patterns when we do queries
-
-/*
-select column1, column2, ....
-from tableName where columnName like pattern
-for patterns
-% => indicates 0 or more character
-_ => indicates just single character
-*/
-
---  #Q9=> list personals whose name starts with "A"
- select * from personal where name like'A%'; #'1001', 'Ali Can', '70000'
-
--- #Q10=> list personals whose name ends with "N"
-select * from personal where name like '%N';
-/*'1001', 'Ali Can', '70000'
-'1002', 'Canan Yaman', '85000'
-'1003', 'Meltem Tan', '65000'
-*/
-
--- #Q11=> list personals whose name's second letter is "E"
-select * from personal where name like '_E%'; #'1003', 'Meltem Tan', '65000'
-
--- #Q12=> list personals whose name's second letter is "E" and its other letters have "N"
-select * from personal where name like '_E%N'; # '1003', 'Meltem Tan', '65000'
-
--- #Q13=> list personals whose name has not "E"
-select * from personal where name not like '%E%';
-/*
-'1001', 'Ali Can', '70000'
-'1002', 'Canan Yaman', '85000'
-*/
-
--- #Q14=> list personals whose salary is with six-digits
-select * from personal where salary like '______';
-
--- #Q15=> list personals whose name's first letter is "C" and 7th letter is "Y"
-select * from personal where name like 'C_____Y%'; # '1002', 'Canan Yaman', '85000'
-
-
 -------------------------SELECT-REGEXP_LIKE---------------------------
 /*
+You can use Regular Expression with REGEXP_LIKE Condition
 select-regexp_like
 REGEXP_LIKE can be used for complicater patterns
 'c' => means case-sensitive
@@ -48,7 +8,7 @@ REGEXP_LIKE can be used for complicater patterns
 in SQL as default, case-insensitive is active
 
 syntax:
-regexp_like(columnName, 'patern[]', 'c')
+regexp_like(columnName, 'pattern[]', 'c')
 */
 
 CREATE TABLE words (
@@ -118,3 +78,80 @@ CREATE TABLE words (
 
 -- #Q27=> list five-letter-words starting with "s" or "b", 3rd letter is "l"
 select * from words where regexp_like(word, '^s|^b_[l]__','c');
+
+
+-----------------------------------------------------------------------
+
+create table words
+(
+wordId char(10) unique,
+word varchar(50) not null,
+numberOfLetters smallint
+);
+
+insert into words values(1001, 'hot', 3);
+insert into words values(1002, 'hat', 3);
+insert into words values(1003, 'hit', 3);
+insert into words values(1004, 'hbt', 3);
+insert into words values(1008, 'hct', 3);
+insert into words values(1005, 'adem', 4);
+insert into words values(1006, 'selena', 6);
+insert into words values(1007, 'yusuf', 5);
+
+
+--Select words whose first character is 'h', last character is 't' and second character is 'o', or 'a' or 'i'
+/*
+--if we solve with like condition it would be very long query
+--in this case, we use regexp_like condition
+--SELECT word
+--FROM words
+--WHERE word LIKE 'ho%t' OR word LIKE 'ha%t' OR word LIKE 'hi%t';
+*/
+ select word from words
+ where regexp_like(word,'h[o|a|i](.*)t');
+
+ --or use ~
+
+select word from words
+where word ~ 'h[o|a|i](.*)t';
+
+--Select words whose first character is 'h',
+--last character is 't' and second character is from 'a' to 'e'
+select word from words
+where ~ 'h[a-e]().*t'; --[a-e] ==> a,b,c,d,e
+
+--Select words whose first character is 's' or 'a' or 'y'
+select word from words
+where regexp_like(word, '^[say](.*)');--> ^ means first character when you use it before the brackets.
+
+--Select words whose last character is 'm' or 'a' or 'f'
+select word from words
+where regexp_like(word,'(.*)[maf]$');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

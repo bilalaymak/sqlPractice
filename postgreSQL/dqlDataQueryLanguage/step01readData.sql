@@ -111,8 +111,7 @@ insert into personal values('1002','Canan Yaman','85000');
 insert into personal values('1003','Meltem Tan','65000');
 insert into personal values('1004','Omer Atalay','75000');
 
--- # between keyword
--- # lists the information between two datas
+--  between keyword lists the information between two datas
 
 -- #Q5=> list personals informations whose id is between 1002 and 1005
 

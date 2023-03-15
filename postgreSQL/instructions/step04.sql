@@ -65,7 +65,7 @@ FROM companies;
 ----------------------------------LIKE---------------------------------------
 --LIKE Condition: It is used with WildCard
 
---1) % WildCard: It represents zore or more characters
+--1) % WildCard: It represents zero or more characters
 
 --Select employee names which start with 'E'
 SELECT name
@@ -149,7 +149,9 @@ SELECT word
 FROM words
 WHERE word NOT LIKE '_a%' AND word NOT LIKE '_e%';
 
---REGEXP_LIKE Condition: You can use Regular Expession with REGEXP_LIKE Condition
+-----------------------------SELECT-REGEXP_LIKE----------------------------------
+
+--REGEXP_LIKE Condition: You can use Regular Expression with REGEXP_LIKE Condition
 
 --Select words whose first character is 'h', last character is 't' and second character is 'o', or 'a' or 'i'
 --1st Way:
