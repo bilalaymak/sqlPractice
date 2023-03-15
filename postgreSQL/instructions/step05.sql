@@ -173,7 +173,9 @@ HAVING SUM(salary) > 2500;-->After Group By, Where can NOT be used. We have to u
 SELECT state, COUNT(state)
 FROM workers
 GROUP BY state
-HAVING COUNT(state) > 1;-->HAVING is for filtering(if) for group by. After HAVING we have to use aggragate function. DO not use field names.
+HAVING COUNT(state) > 1;
+-->HAVING is for filtering(if) for group by.
+--After HAVING we have to use aggregate function. DO not use field names.
 
 --Find the minimum salary if it is more than 2000 for every company
 SELECT company, MIN(salary) AS min_salary_per_company
@@ -190,7 +192,7 @@ HAVING MAX(salary) < 3000;
 --UNION Operator: 1) It is used to join the result of 2 queries
 --				  2) UNION Operator returns unique records. It removes the repeated records.
 --				  3) By using UNION operator we are able to put different fields into a single field.
---				  4) When we put diffent fields into a sinlge field, data types must be same.
+--				  4) When we put different fields into a single field, data types must be same.
 
 
 --Find the state whose salary is greater than 3000, employee names less than 2000 without duplication.

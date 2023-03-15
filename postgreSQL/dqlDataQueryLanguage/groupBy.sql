@@ -34,6 +34,15 @@ group by state
 order by "number of employees" desc;
 
 --Find the number of the employees whose salary is more than $2000 per company
+select company, count(company) as "number of employees higher than $2000" from workers
+where salary >2000
+group  by company
+order by "number of employees higher than $2000";
+
+--Find the minimum and maximum salary for every company
+select  company, min(salary) as minimumSalary, max(salary) as maximumSalary from workers
+group by company;
+
 
 
 
