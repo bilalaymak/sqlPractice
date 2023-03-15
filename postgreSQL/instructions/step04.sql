@@ -52,9 +52,9 @@ SELECT company FROM companies WHERE company_id > '100';
 
 --Find the company name, number of employees and average salary for every company
 SELECT company, number_of_employees, (SELECT AVG(salary)
-									  FROM employees WHERE employees.company = companies.company)
-									  AS avg_salary_per_company
-FROM companies;
+FROM employees WHERE employees.company = companies.company)
+AS avg_salary_per_company
+FROM companies;  --???
 
 
 --Find the name of the companies, company ids, maximum and minimum salaries per company.
@@ -62,7 +62,7 @@ SELECT company, company_id, (SELECT MIN(salary) FROM employees WHERE employees.c
 							(SELECT MAX(salary) FROM employees WHERE employees.company = companies.company)AS max_salary_per_company
 FROM companies;
 
-
+----------------------------------LIKE---------------------------------------
 --LIKE Condition: It is used with WildCard
 
 --1) % WildCard: It represents zore or more characters

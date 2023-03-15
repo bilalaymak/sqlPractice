@@ -16,7 +16,7 @@ INSERT INTO words VALUES (1007, 'yusuf', 5);
 
 SELECT * FROM words;
 
---ORDER BY: TO put the records in ascending or descening order we use order by.
+--ORDER BY: TO put the records in ascending or descending order we use order by.
 --Order By can be used just with SELECT.
 
 --Put the records in ascending order by using number_of_letters
