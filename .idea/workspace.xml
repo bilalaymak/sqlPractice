@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a9ae8ea-51aa-4356-b8ff-44826030e052" name="Changes" comment="updated">
+      <change afterPath="$PROJECT_DIR$/postgreSQL/dqlDataQueryLanguage/orderBy.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgreSQL/ddlDataDefinionLanguage/alter.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/ddlDataDefinionLanguage/alter.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/postgreSQL/dqlDataQueryLanguage/regexp_like.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/dqlDataQueryLanguage/regexp_like.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreSQL/instructions/step05.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/instructions/step05.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +14,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -32,7 +40,8 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/bilal/IdeaProjects/sqlPractice"
+    "last_opened_file_path": "C:/Users/bilal/IdeaProjects/javaoop",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -150,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678843123579</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="updated">
+      <created>1678846079171</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678846079171</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

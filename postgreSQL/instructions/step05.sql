@@ -1,3 +1,4 @@
+
 CREATE TABLE words
 (
   word_id CHAR(10) UNIQUE,

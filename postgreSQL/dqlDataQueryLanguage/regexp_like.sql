@@ -157,6 +157,7 @@ salary smallint,
 company varchar(20)
 );
 
+
 insert into workers values(123456789, 'John Walker', 'Florida', 2500, 'IBM');
 insert into workers values(234567890, 'Brad Pitt', 'Florida', 1500, 'APPLE');
 insert into workers values(345678901, 'Eddie Murphy', 'Texas', 3000, 'IBM');
@@ -182,6 +183,7 @@ where state ~ '..[0x]';
 --Select states whose third character from the end is not 'n' or 'x'
 select state from workers
 where state ~ '[^n-x]..$';
+
 
 
 
