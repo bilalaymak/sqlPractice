@@ -103,7 +103,7 @@ ON employee.manager_id = manager.id
 
 --ALTER TABLE
 --The Alter Table statement is used to add, delete or modify columns in an existing table.
---The Alter Table statement is used to add and drop constarints in an existing table.
+--The Alter Table statement is used to add and drop constraints in an existing table.
 
 --1) We can add a column to an existing table
 ALTER TABLE workers

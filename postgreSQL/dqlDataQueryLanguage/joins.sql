@@ -76,9 +76,34 @@ on o.companyId = mc.companyId
 order by o.orderDate asc;
 
 
+--4) FULL JOIN: Returns all data from both table
+
+--Get company_name, order id and order date from both of the tables
+select mc.companyname,o.orderId,o.orderDate
+from orders o full join myCompanies mc
+on mc.companyId = o.companyId;
 
 
+-- 5) SELF JOIN: You will have a single table but you will use it as two tables
+drop table workers;
+select * from workers;
+create table workers
+(
+id char(2),
+name varchar(20),
+title varchar(20),
+managerId char(2)
+);
 
+insert into workers values (1, 'Ali Can', 'SDET', 2);
+insert into workers values (2, 'John Walker', 'QA', 3);
+insert into workers values (3, 'Angie Star', 'QA Lead', 4);
+insert into workers values (4, 'Amy Sky', 'CEO', 5);
+
+--Create a table which displays the manager of employees
+select employee.name as employee, manager.name as manager
+from workers employee inner join workers manager
+on employee.managerId = manager.id
 
 
 
