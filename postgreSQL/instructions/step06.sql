@@ -52,7 +52,7 @@ FROM my_companies mc LEFT JOIN orders o
 ON mc.company_id = o.company_id
 
 
---		 3) RIGHT JOIN: Returns all data from second table
+--3) RIGHT JOIN: Returns all data from second table
 
 --Get company_name, order id and order date for the companies in orders table
 
@@ -69,7 +69,7 @@ ON mc.company_id = o.company_id
 ORDER BY o.order_date DESC
 
 
---		 4) FULL JOIN: Returns all data from both table
+--4) FULL JOIN: Returns all data from both table
 --Get company_name, order id and order date from both of the tables
 
 SELECT mc.company_name, o.order_id, o.order_date

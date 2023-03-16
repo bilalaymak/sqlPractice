@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a9ae8ea-51aa-4356-b8ff-44826030e052" name="Changes" comment="updated">
-      <change afterPath="$PROJECT_DIR$/postgreSQL/dqlDataQueryLanguage/unionOperator.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgreSQL/dqlDataQueryLanguage/joins.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgreSQL/dqlDataQueryLanguage/havingClause.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/dqlDataQueryLanguage/havingClause.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreSQL/ddlDataDefinionLanguage/alter.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreSQL/instructions/step06.sql" beforeDir="false" afterPath="$PROJECT_DIR$/postgreSQL/instructions/step06.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgreSQL/joins/step05joins.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678920574204</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="updated">
+      <created>1678922235026</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678922235026</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
